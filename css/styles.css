@@ -1,0 +1,39 @@
+/* css/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --vs-black: #131921;
+    --vs-dark-gray: #232f3e;
+    --vs-light-gray: #eaeded;
+    --vs-yellow: #febd69;
+    --vs-yellow-hover: #f3a847;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--vs-light-gray);
+    color: #0f1111;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Clases de utilidad corporativa VirtualStore */
+.bg-vs-black { background-color: var(--vs-black); }
+.bg-vs-dark { background-color: var(--vs-dark-gray); }
+.bg-vs-yellow { background-color: var(--vs-yellow); }
+.bg-vs-yellow:hover { background-color: var(--vs-yellow-hover); }
+.text-vs-yellow { color: var(--vs-yellow); }
+.border-vs-yellow { border-color: var(--vs-yellow); }
