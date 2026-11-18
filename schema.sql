@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS virtualstore_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE virtualstore_db;
+
+-- 1. Tabla USUARIO
+CREATE TABLE IF NOT EXISTS USUARIO (
+    id_user INT AUTO_INCREMENT PRIMARY KEY,
+    name_user VARCHAR(100) NOT NULL,
+    date_reg DATETIME NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    psword VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 2. Tabla PRODUCTOS
+CREATE TABLE IF NOT EXISTS PRODUCTOS (
+    id_prod INT AUTO_INCREMENT PRIMARY KEY,
+    name_prod VARCHAR(150) NOT NULL,
+    type_prod VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity_remain INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- 3. Tabla CUPONES
+CREATE TABLE IF NOT EXISTS CUPONES (
+    Id_cupon INT AUTO_INCREMENT PRIMARY KEY,
+    name_cupon VARCHAR(100) NOT NULL,
+    date_start DATETIME NOT NULL,
+    date_end DATETIME NOT NULL,
+    type_aplicable_discount VARCHAR(50) NOT NULL,
+    percent_discount DECIMAL(5, 2) NOT NULL,
+    max_money_discount DECIMAL(10, 2) NOT NULL,
+    key_discount VARCHAR(50) NOT NULL UNIQUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
