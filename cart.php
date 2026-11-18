@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['checkout'])) {
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <span class="font-bold text-gray-900">$<?= number_format($item['price'] * $item['quantity'], 2) ?></span>
-                                        <a href="cart.php?action=remove&id=<?= $id ?>" class="text-red-500 hover:text-red-700 text-sm font-semibold border border-red-200 px-3 py-1 rounded hover:bg-red-50 transition">Acción: Eliminar</a>
+                                        <a href="cart.php?action=remove&id=<?= $id ?>" class="text-red-500 hover:text-red-700 text-sm font-semibold border border-red-200 px-3 py-1 rounded hover:bg-red-50 transition">Eliminar Producto</a>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
